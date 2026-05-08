@@ -2,8 +2,8 @@ type App = 'next' | 'nuxt' | 'vanilla'
 
 const apps: Record<App, { label: string; url: string }> = {
   next: { label: 'Next.js', url: '/' },
-  nuxt: { label: 'Nuxt', url: process.env.NEXT_PUBLIC_NUXT_URL ?? '#' },
-  vanilla: { label: 'Vanilla TS', url: process.env.NEXT_PUBLIC_VANILLA_URL ?? '#' },
+  nuxt: { label: 'Nuxt', url: process.env.NEXT_PUBLIC_NUXT_URL ?? 'http://localhost:3001' },
+  vanilla: { label: 'Vanilla TS', url: process.env.NEXT_PUBLIC_VANILLA_URL ?? 'http://localhost:3002' },
 }
 
 export default function AppSwitcher({ current }: { current: App }) {

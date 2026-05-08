@@ -45,6 +45,7 @@ export const translations = {
       loading: 'Loading…',
       error: 'Something went wrong.',
       noData: 'No data available.',
+      comingSoon: 'Coming soon',
     },
   },
   'fr-CA': {
@@ -91,6 +92,7 @@ export const translations = {
       loading: 'Chargement…',
       error: 'Une erreur est survenue.',
       noData: 'Aucune donnée disponible.',
+      comingSoon: 'Bientôt disponible',
     },
   },
 } as const;

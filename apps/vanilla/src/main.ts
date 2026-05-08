@@ -21,7 +21,7 @@ function render() {
           <button id="lang-toggle" class="ml-4 px-3 py-1 rounded border border-blue-400 text-blue-600 hover:bg-blue-50 transition-colors">${t.language.toggle}</button>
         </div>
       </header>
-      <p class="text-gray-500">Coming soon — built with Vite + TypeScript</p>
+      <p class="text-gray-500">${t.common.comingSoon} — built with Vite + TypeScript</p>
     </main>
   `
 
