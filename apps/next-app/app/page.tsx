@@ -17,15 +17,25 @@ export default function Home() {
     api.profile().then(setProfile).catch(console.error)
   }, [])
 
-  return (
-    <div className="lg:grid lg:grid-cols-[20rem_1fr] min-h-screen">
-      <Sidebar profile={profile} locale={locale} onLocaleChange={setLocale} />
+  useEffect(() => {
+    document.documentElement.lang = locale
+  }, [locale])
 
-      <main className="p-8 lg:p-12 max-w-3xl">
-        <ExperienceSection locale={locale} />
-        <SkillsSection locale={locale} />
-        <AchievementsSection locale={locale} />
-      </main>
-    </div>
+  return (
+    <>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+
+      <div className="lg:grid lg:grid-cols-[20rem_1fr] min-h-screen">
+        <Sidebar profile={profile} locale={locale} onLocaleChange={setLocale} />
+
+        <main id="main-content" className="p-6 sm:p-8 lg:p-12 max-w-3xl" tabIndex={-1}>
+          <ExperienceSection locale={locale} />
+          <SkillsSection locale={locale} />
+          <AchievementsSection locale={locale} />
+        </main>
+      </div>
+    </>
   )
 }

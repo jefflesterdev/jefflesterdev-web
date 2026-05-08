@@ -24,28 +24,35 @@ export default function SkillsSection({ locale }: { locale: Locale }) {
   if (!groups.length) return null
 
   return (
-    <section id="skills" className="mb-16">
+    <section id="skills" className="mb-16" aria-labelledby="skills-heading">
       <SectionHeading label={t.nav.skills} />
 
       <div className="flex flex-col gap-8">
         {groups.map(group => (
           <div key={group.id}>
             <p
+              id={`skill-group-${group.id}`}
               className="font-mono text-xs uppercase tracking-widest mb-3"
               style={{ color: 'var(--color-faint)' }}
             >
               {group.name}
             </p>
-            <div className="flex flex-wrap gap-2">
+            <ul
+              className="flex flex-wrap gap-2 list-none m-0 p-0"
+              aria-labelledby={`skill-group-${group.id}`}
+            >
               {group.skills.map(skill => (
-                <span
-                  key={skill.id}
-                  className={proficiencyClass[skill.proficiency] ?? 'chip-familiar'}
-                >
-                  {skill.name}
-                </span>
+                <li key={skill.id}>
+                  <span
+                    className={proficiencyClass[skill.proficiency] ?? 'chip-familiar'}
+                    title={`${skill.proficiency} proficiency`}
+                  >
+                    {skill.name}
+                    <span className="sr-only"> ({skill.proficiency})</span>
+                  </span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         ))}
       </div>
