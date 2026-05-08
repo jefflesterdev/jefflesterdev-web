@@ -51,12 +51,6 @@ export default function AchievementsSection({ locale }: { locale: Locale }) {
               {item.title}
             </h3>
 
-            {item.issuer && (
-              <p className="text-xs" style={{ color: 'var(--color-accent)' }}>
-                {item.issuer}
-              </p>
-            )}
-
             {item.description && (
               <p className="text-xs leading-relaxed" style={{ color: 'var(--color-muted)' }}>
                 {item.description}
