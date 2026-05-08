@@ -1,0 +1,5 @@
+name = "jefflesterdev-next"
+compatibility_date = "2026-05-08"
+
+[assets]
+directory = "./.vercel/output/static"
