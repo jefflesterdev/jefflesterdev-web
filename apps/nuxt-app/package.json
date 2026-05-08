@@ -1,0 +1,23 @@
+{
+  "name": "@jld/nuxt-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev --port 3001",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@jld/i18n": "workspace:*",
+    "@jld/types": "workspace:*",
+    "nuxt": "^3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vue-tsc": "^2"
+  }
+}

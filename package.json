@@ -1,0 +1,18 @@
+{
+  "name": "jefflesterdev-web",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=10"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["@parcel/watcher", "esbuild", "sharp", "workerd"]
+  },
+  "scripts": {
+    "dev:next": "pnpm --filter @jld/next-app dev",
+    "dev:nuxt": "pnpm --filter @jld/nuxt-app dev",
+    "dev:vanilla": "pnpm --filter @jld/vanilla dev",
+    "typecheck": "pnpm -r run typecheck"
+  }
+}
