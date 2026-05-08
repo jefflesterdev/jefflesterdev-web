@@ -5,6 +5,7 @@ import type { Locale } from '@jld/i18n'
 import type { Profile } from '@jld/types'
 import { api } from '@/lib/api'
 import Sidebar from '@/components/Sidebar'
+import BioSection from '@/components/sections/BioSection'
 import ExperienceSection from '@/components/sections/ExperienceSection'
 import SkillsSection from '@/components/sections/SkillsSection'
 import AchievementsSection from '@/components/sections/AchievementsSection'
@@ -31,6 +32,7 @@ export default function Home() {
         <Sidebar profile={profile} locale={locale} onLocaleChange={setLocale} />
 
         <main id="main-content" className="p-6 sm:p-8 lg:p-12 max-w-3xl" tabIndex={-1}>
+          {profile?.bio && <BioSection bio={profile.bio} />}
           <ExperienceSection locale={locale} />
           <SkillsSection locale={locale} />
           <AchievementsSection locale={locale} />
