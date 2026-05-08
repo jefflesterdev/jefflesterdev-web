@@ -6,9 +6,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  nitro: {
-    preset: 'cloudflare-pages',
-  },
+  ssr: false,
   runtimeConfig: {
     public: {
       nextUrl: '',
