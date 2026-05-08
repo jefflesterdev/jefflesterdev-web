@@ -12,6 +12,7 @@ interface Props {
 }
 
 const NAV: { href: string; key: keyof ReturnType<typeof useTranslations>['nav'] }[] = [
+  { href: '#bio',          key: 'bio' },
   { href: '#experience',   key: 'experience' },
   { href: '#skills',       key: 'skills' },
   { href: '#achievements', key: 'achievements' },

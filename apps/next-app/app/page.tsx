@@ -32,7 +32,7 @@ export default function Home() {
         <Sidebar profile={profile} locale={locale} onLocaleChange={setLocale} />
 
         <main id="main-content" className="p-6 sm:p-8 lg:p-12 max-w-3xl" tabIndex={-1}>
-          {profile?.bio && <BioSection bio={profile.bio} />}
+          {profile?.bio && <BioSection bio={profile.bio} locale={locale} />}
           <ExperienceSection locale={locale} />
           <SkillsSection locale={locale} />
           <AchievementsSection locale={locale} />

@@ -4,6 +4,7 @@ export const translations = {
   en: {
     nav: {
       profile: 'Profile',
+      bio: 'About',
       experience: 'Experience',
       skills: 'Skills',
       projects: 'Projects',
@@ -51,6 +52,7 @@ export const translations = {
   'fr-CA': {
     nav: {
       profile: 'Profil',
+      bio: 'À propos',
       experience: 'Expérience',
       skills: 'Compétences',
       projects: 'Projets',
