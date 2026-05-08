@@ -44,11 +44,11 @@ export default function SkillsSection({ locale }: { locale: Locale }) {
               {group.skills.map(skill => (
                 <li key={skill.id}>
                   <span
-                    className={proficiencyClass[skill.proficiency] ?? 'chip-familiar'}
-                    title={`${skill.proficiency} proficiency`}
+                    className={proficiencyClass[skill.proficiency ?? ''] ?? 'chip-familiar'}
+                    title={skill.proficiency ? `${skill.proficiency} proficiency` : undefined}
                   >
                     {skill.name}
-                    <span className="sr-only"> ({skill.proficiency})</span>
+                    {skill.proficiency && <span className="sr-only"> ({skill.proficiency})</span>}
                   </span>
                 </li>
               ))}
