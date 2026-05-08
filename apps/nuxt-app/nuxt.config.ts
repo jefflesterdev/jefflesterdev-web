@@ -9,8 +9,8 @@ export default defineNuxtConfig({
   ssr: false,
   runtimeConfig: {
     public: {
-      nextUrl: '',
-      vanillaUrl: '',
+      nextUrl: 'https://jefflesterdev-next.jeffery-a-lester.workers.dev',
+      vanillaUrl: 'https://jefflesterdev-vanilla.jeffery-a-lester.workers.dev',
       apiBaseUrl: 'https://jefflesterdev-api.jeffery-a-lester.workers.dev',
     },
   },

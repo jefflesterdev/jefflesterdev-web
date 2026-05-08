@@ -18,8 +18,7 @@ dist/
 # Cloudflare
 .wrangler/
 
-# Environment
-.env
+# Environment — .env.production is committed (no secrets, just public URLs)
 .env.local
 .env.*.local
 
