@@ -1,17 +1,28 @@
 import type { Metadata } from 'next'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const jetbrains = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
-  title: 'Jeff Lester — Next.js',
-  description: 'Jeff Lester developer resume and portfolio',
+  title: 'Jeff Lester — Full Stack Developer',
+  description: 'Developer resume and portfolio',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-white text-gray-900 antialiased">
-        {children}
-      </body>
+    <html lang="en" className={`${inter.variable} ${jetbrains.variable}`}>
+      <body className="font-sans">{children}</body>
     </html>
   )
 }

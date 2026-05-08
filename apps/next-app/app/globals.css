@@ -1,1 +1,105 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), "Courier New", monospace;
+
+  --color-bg:         #0d1117;
+  --color-surface:    #161b22;
+  --color-raised:     #21262d;
+  --color-border:     #30363d;
+  --color-text:       #e6edf3;
+  --color-muted:      #7d8590;
+  --color-faint:      #484f58;
+  --color-accent:     #22d3ee;
+  --color-green:      #3fb950;
+  --color-yellow:     #e3b341;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dot-grid texture for sidebar */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(34, 211, 238, 0.07) 1px, transparent 1px);
+  background-size: 1.5rem 1.5rem;
+}
+
+/* Glowing name */
+.name-glow {
+  text-shadow: 0 0 2rem rgba(34, 211, 238, 0.5);
+}
+
+/* Pulsing availability dot */
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.5); }
+  70%  { box-shadow: 0 0 0 0.4rem rgba(63, 185, 80, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(63, 185, 80, 0); }
+}
+.pulse-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--color-green);
+  animation: pulse-ring 2s ease-out infinite;
+  flex-shrink: 0;
+}
+
+/* Sidebar nav links */
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  transition: color 0.15s, background-color 0.15s;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: var(--color-text);
+  background-color: var(--color-raised);
+}
+
+/* Social links */
+.social-link {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-faint);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.social-link:hover {
+  color: var(--color-accent);
+}
+
+/* Timeline */
+.timeline-line {
+  position: absolute;
+  left: 0.35rem;
+  top: 0.75rem;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--color-accent), transparent);
+}
+
+/* Skill chip proficiency variants */
+.chip-expert     { color: var(--color-accent);  border-color: var(--color-accent); }
+.chip-proficient { color: var(--color-text);    border-color: var(--color-border); }
+.chip-familiar   { color: var(--color-muted);   border-color: var(--color-border); opacity: 0.65; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 0.25rem; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 0.25rem; }

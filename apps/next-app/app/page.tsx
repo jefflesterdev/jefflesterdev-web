@@ -1,28 +1,31 @@
 'use client'
 
-import { useState } from 'react'
-import { type Locale, useTranslations } from '@jld/i18n'
-import AppSwitcher from '@/components/AppSwitcher'
+import { useState, useEffect } from 'react'
+import type { Locale } from '@jld/i18n'
+import type { Profile } from '@jld/types'
+import { api } from '@/lib/api'
+import Sidebar from '@/components/Sidebar'
+import ExperienceSection from '@/components/sections/ExperienceSection'
+import SkillsSection from '@/components/sections/SkillsSection'
+import AchievementsSection from '@/components/sections/AchievementsSection'
 
 export default function Home() {
+  const [profile, setProfile] = useState<Profile | null>(null)
   const [locale, setLocale] = useState<Locale>('en')
-  const t = useTranslations(locale)
+
+  useEffect(() => {
+    api.profile().then(setProfile).catch(console.error)
+  }, [])
 
   return (
-    <main className="min-h-screen p-8">
-      <header className="flex items-center justify-between mb-12">
-        <h1 className="text-2xl font-bold">Jeff Lester</h1>
-        <div className="flex items-center">
-          <AppSwitcher current="next" />
-          <button
-            onClick={() => setLocale(locale === 'en' ? 'fr-CA' : 'en')}
-            className="ml-4 px-3 py-1 rounded border border-blue-400 text-blue-600 hover:bg-blue-50 transition-colors text-sm"
-          >
-            {t.language.toggle}
-          </button>
-        </div>
-      </header>
-      <p className="text-gray-500">{t.common.comingSoon} — built with Next.js 15</p>
-    </main>
+    <div className="lg:grid lg:grid-cols-[20rem_1fr] min-h-screen">
+      <Sidebar profile={profile} locale={locale} onLocaleChange={setLocale} />
+
+      <main className="p-8 lg:p-12 max-w-3xl">
+        <ExperienceSection locale={locale} />
+        <SkillsSection locale={locale} />
+        <AchievementsSection locale={locale} />
+      </main>
+    </div>
   )
 }
