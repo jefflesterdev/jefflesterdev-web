@@ -1,6 +1,6 @@
 import type { ApiResponse, Profile, SkillGroup, Experience, Achievement } from '@jld/types'
 
-const BASE =
+export const BASE =
   process.env.NEXT_PUBLIC_API_BASE_URL ??
   'https://jefflesterdev-api.jeffery-a-lester.workers.dev'
 

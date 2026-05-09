@@ -4,6 +4,7 @@ import type { Locale } from '@jld/i18n'
 import { useTranslations } from '@jld/i18n'
 import type { Profile } from '@jld/types'
 import AppSwitcher from './AppSwitcher'
+import { BASE } from '@/lib/api'
 
 interface Props {
   profile: Profile | null
@@ -125,6 +126,15 @@ export default function Sidebar({ profile, locale, onLocaleChange }: Props) {
       {/* Footer */}
       <div className="flex flex-col gap-3 pt-4" style={{ borderTop: '1px solid var(--color-border)' }}>
         <AppSwitcher current="next" />
+        <a
+          href={BASE}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link"
+          aria-label="API documentation (opens in new tab)"
+        >
+          <span aria-hidden="true">↗</span> api docs
+        </a>
         <button
           onClick={() => onLocaleChange(nextLocale)}
           className="self-start font-mono text-xs px-3 py-2 rounded border transition-colors min-h-11"
