@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      hmr: { port: 24678 },
+    },
   },
   ssr: false,
   app: {
