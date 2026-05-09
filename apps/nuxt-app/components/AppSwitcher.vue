@@ -2,12 +2,11 @@
 type App = 'next' | 'nuxt' | 'vanilla'
 
 const props = defineProps<{ current: App }>()
-const config = useRuntimeConfig()
 
 const apps: Record<App, { label: string; stack: string; url: string }> = {
-  next:    { label: 'Next.js',    stack: 'React / Next.js',    url: (config.public.nextUrl as string)    || 'http://localhost:3000' },
+  next:    { label: 'Next.js',    stack: 'React / Next.js',    url: import.meta.env.VITE_NEXT_URL    || 'http://localhost:3000' },
   nuxt:    { label: 'Nuxt',       stack: 'Vue / Nuxt',         url: '/' },
-  vanilla: { label: 'Vanilla TS', stack: 'Vanilla TypeScript', url: (config.public.vanillaUrl as string) || 'http://localhost:3002' },
+  vanilla: { label: 'Vanilla TS', stack: 'Vanilla TypeScript', url: import.meta.env.VITE_VANILLA_URL || 'http://localhost:3002' },
 }
 
 const others = computed(() =>

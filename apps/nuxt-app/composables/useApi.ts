@@ -6,8 +6,7 @@ interface ApiResponse<T> {
 }
 
 export function useApi() {
-  const config = useRuntimeConfig()
-  const base = (config.public.apiBaseUrl as string) || 'https://jefflesterdev-api.jeffery-a-lester.workers.dev'
+  const base = import.meta.env.VITE_API_URL || 'https://jefflesterdev-api.jeffery-a-lester.workers.dev'
 
   async function get<T>(path: string): Promise<T> {
     const res = await fetch(`${base}${path}`)

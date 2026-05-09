@@ -26,11 +26,4 @@ export default defineNuxtConfig({
       ],
     },
   },
-  runtimeConfig: {
-    public: {
-      nextUrl:    '',
-      vanillaUrl: '',
-      apiBaseUrl: '',
-    },
-  },
 })
