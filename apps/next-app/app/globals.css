@@ -167,9 +167,15 @@ body {
 }
 
 .animate-sidebar {
-  position: relative;
   z-index: 10;
   animation: sidebar-enter 220ms ease-out both;
+}
+
+/* On mobile the sidebar isn't sticky, so we need relative to activate z-index */
+@media (max-width: 1023px) {
+  .animate-sidebar {
+    position: relative;
+  }
 }
 
 .animate-main {
