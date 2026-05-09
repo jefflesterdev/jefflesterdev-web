@@ -28,10 +28,10 @@ export default function Home() {
         Skip to main content
       </a>
 
-      <div className="lg:grid lg:grid-cols-[20rem_1fr] min-h-screen">
+      <div className="lg:grid lg:grid-cols-[20rem_1fr] min-h-screen overflow-x-hidden">
         <Sidebar profile={profile} locale={locale} onLocaleChange={setLocale} />
 
-        <main id="main-content" className="p-6 sm:p-8 lg:p-12 max-w-3xl" tabIndex={-1}>
+        <main id="main-content" className="animate-main p-6 sm:p-8 lg:p-12 max-w-3xl" tabIndex={-1}>
           {profile?.bio && <BioSection bio={profile.bio} locale={locale} />}
           <ExperienceSection locale={locale} />
           <SkillsSection locale={locale} />

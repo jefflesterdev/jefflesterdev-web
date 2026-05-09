@@ -149,3 +149,42 @@ body {
 ::-webkit-scrollbar { width: 0.25rem; }
 ::-webkit-scrollbar-track { background: var(--color-bg); }
 ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 0.25rem; }
+
+/* ── Page load animations ─────────────────────────────────────── */
+@keyframes sidebar-enter {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes main-enter-mobile {
+  from { opacity: 0; transform: translateY(-3rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes main-enter-desktop {
+  from { opacity: 0; transform: translateX(-8rem); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.animate-sidebar {
+  position: relative;
+  z-index: 10;
+  animation: sidebar-enter 220ms ease-out both;
+}
+
+.animate-main {
+  animation: main-enter-mobile 380ms ease-out 180ms both;
+}
+
+@media (min-width: 1024px) {
+  .animate-main {
+    animation: main-enter-desktop 380ms ease-out 180ms both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-sidebar,
+  .animate-main {
+    animation: none;
+  }
+}
