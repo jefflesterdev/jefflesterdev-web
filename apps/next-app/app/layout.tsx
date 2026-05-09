@@ -14,7 +14,7 @@ const jetbrains = JetBrains_Mono({
   display: 'swap',
 })
 
-const description = 'Full stack developer specializing in TypeScript, React, Vue, and Cloudflare Workers. View my interactive resume and portfolio.'
+const description = 'Senior full stack developer with 20+ years of production experience. Expert in C#, TypeScript, React, and Vue, with a strong business analysis background and a record of delivering high-impact systems under pressure.'
 const url = 'https://jefflesterdev-next.jeffery-a-lester.workers.dev'
 
 export const metadata: Metadata = {

@@ -19,15 +19,15 @@ export default defineNuxtConfig({
       title: 'Jeff Lester — Full Stack Developer',
       htmlAttrs: { lang: 'en' },
       meta: [
-        { name: 'description', content: 'Full stack developer specializing in TypeScript, React, Vue, and Cloudflare Workers. View my interactive resume and portfolio.' },
+        { name: 'description', content: 'Senior full stack developer with 20+ years of production experience. Expert in C#, TypeScript, React, and Vue, with a strong business analysis background and a record of delivering high-impact systems under pressure.' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://jefflesterdev-nuxt.jeffery-a-lester.workers.dev' },
         { property: 'og:site_name', content: 'Jeff Lester' },
         { property: 'og:title', content: 'Jeff Lester — Full Stack Developer' },
-        { property: 'og:description', content: 'Full stack developer specializing in TypeScript, React, Vue, and Cloudflare Workers. View my interactive resume and portfolio.' },
+        { property: 'og:description', content: 'Senior full stack developer with 20+ years of production experience. Expert in C#, TypeScript, React, and Vue, with a strong business analysis background and a record of delivering high-impact systems under pressure.' },
         { name: 'twitter:card', content: 'summary' },
         { name: 'twitter:title', content: 'Jeff Lester — Full Stack Developer' },
-        { name: 'twitter:description', content: 'Full stack developer specializing in TypeScript, React, Vue, and Cloudflare Workers. View my interactive resume and portfolio.' },
+        { name: 'twitter:description', content: 'Senior full stack developer with 20+ years of production experience. Expert in C#, TypeScript, React, and Vue, with a strong business analysis background and a record of delivering high-impact systems under pressure.' },
       ],
       link: [
         { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
