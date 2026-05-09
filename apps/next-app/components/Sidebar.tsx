@@ -83,6 +83,12 @@ export default function Sidebar({ profile, locale, onLocaleChange }: Props) {
         </ul>
       </nav>
 
+      {/* Resume link */}
+      <a href="/resume" className="nav-link" style={{ color: 'var(--color-accent)' }}>
+        <span aria-hidden="true" className="font-mono text-xs" style={{ color: 'var(--color-accent)' }}>↓</span>
+        resume
+      </a>
+
       {/* Socials */}
       <div className="flex flex-col gap-0.5" role="list" aria-label="Social links">
         {profile?.github_url && (

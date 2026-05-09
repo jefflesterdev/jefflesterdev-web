@@ -73,6 +73,12 @@ const NAV = [
       </ul>
     </nav>
 
+    <!-- Resume link -->
+    <a href="/resume" class="nav-link" style="color: var(--color-accent)">
+      <span aria-hidden="true" class="font-mono text-xs" style="color: var(--color-accent)">↓</span>
+      resume
+    </a>
+
     <!-- Socials -->
     <div class="flex flex-col gap-0.5" role="list" aria-label="Social links">
       <a
