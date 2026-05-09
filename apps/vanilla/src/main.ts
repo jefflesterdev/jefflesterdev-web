@@ -262,7 +262,7 @@ function mount() {
 
   app.innerHTML = `
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div class="lg:grid lg:grid-cols-[20rem_1fr] min-h-screen">
+    <div class="resume-layout lg:grid lg:grid-cols-[20rem_1fr] min-h-screen">
       <aside
         aria-label="Profile and navigation"
         class="animate-sidebar dot-grid flex flex-col gap-8 p-6 sm:p-8 border-b lg:border-b-0 lg:border-r lg:h-screen lg:sticky lg:top-0 lg:overflow-y-auto"

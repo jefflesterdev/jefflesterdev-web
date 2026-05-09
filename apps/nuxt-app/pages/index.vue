@@ -26,7 +26,7 @@ function handleLocaleChange(l: Locale) {
 <template>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <div class="lg:grid lg:grid-cols-[20rem_1fr] min-h-screen">
+  <div class="resume-layout lg:grid lg:grid-cols-[20rem_1fr] min-h-screen">
     <TheSidebar :profile="profile" :locale="locale" @locale-change="handleLocaleChange" />
 
     <main id="main-content" class="animate-main p-6 sm:p-8 lg:p-12 max-w-3xl" :tabindex="-1">
