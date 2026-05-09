@@ -2,6 +2,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
   devtools: { enabled: false },
+  experimental: {
+    viteEnvironmentApi: true,
+  },
   css: ['~/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
