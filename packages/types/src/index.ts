@@ -21,9 +21,9 @@ export interface Achievement {
   id: number;
   title: string;
   description: string | null;
-  year: string | null;
-  display_order: number;
-  created_at: string;
+  company: string;
+  start_date: string;
+  end_date: string | null;
 }
 
 export interface Project {
