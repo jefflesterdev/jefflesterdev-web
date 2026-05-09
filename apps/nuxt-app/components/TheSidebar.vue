@@ -38,7 +38,7 @@ const NAV = [
         role="img"
         :aria-label="profile?.name ? `${profile.name} profile photo` : 'Profile photo placeholder'"
       >
-        <img v-if="profile?.photo_url" :src="profile.photo_url" alt="" />
+        <img v-if="profile?.photo_url" :src="profile.photo_url" alt="" class="w-full h-full object-cover" />
         <span v-else aria-hidden="true">JL</span>
       </div>
 

@@ -38,7 +38,7 @@ export default function Sidebar({ profile, locale, onLocaleChange }: Props) {
           aria-label={profile?.name ? `${profile.name} profile photo` : 'Profile photo placeholder'}
         >
           {profile?.photo_url
-            ? <img src={profile.photo_url} alt="" />
+            ? <img src={profile.photo_url} alt="" className="w-full h-full object-cover" />
             : <span aria-hidden="true">JL</span>
           }
         </div>
