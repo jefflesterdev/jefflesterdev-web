@@ -18,15 +18,18 @@ const others = computed(() =>
 </script>
 
 <template>
-  <div class="flex flex-col gap-2 text-sm">
-    <span class="text-gray-500">built with <span class="text-gray-300">{{ apps[props.current].stack }}</span></span>
-    <div class="flex items-center gap-3">
-      <span class="text-gray-500">View in</span>
+  <div class="flex flex-col gap-2">
+    <span class="font-mono text-xs" style="color: var(--color-faint)">
+      built with <span style="color: var(--color-muted)">{{ apps[props.current].stack }}</span>
+    </span>
+    <div class="flex flex-wrap items-center gap-2">
+      <span class="font-mono text-xs" style="color: var(--color-faint)">view in</span>
       <a
         v-for="[key, app] in others"
         :key="key"
         :href="app.url"
-        class="px-3 py-1 rounded border border-gray-300 hover:border-gray-500 transition-colors"
+        class="font-mono text-xs px-2 py-1 rounded border transition-colors"
+        style="border-color: var(--color-border); color: var(--color-muted)"
       >
         {{ app.label }}
       </a>
