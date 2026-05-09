@@ -26,5 +26,8 @@ function toggleLocale() {
       </div>
     </header>
     <p class="text-gray-500">{{ t.common.comingSoon }} — built with Nuxt 3</p>
+    <footer class="mt-12 text-xs text-gray-400 font-mono">
+      © {{ new Date().getFullYear() }} Jeff Lester
+    </footer>
   </main>
 </template>

@@ -143,6 +143,9 @@ export default function Sidebar({ profile, locale, onLocaleChange }: Props) {
         >
           {t.language.toggle}
         </button>
+        <p className="font-mono text-xs" style={{ color: 'var(--color-faint)' }}>
+          © {new Date().getFullYear()} Jeff Lester
+        </p>
       </div>
     </aside>
   )
