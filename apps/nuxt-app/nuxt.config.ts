@@ -18,7 +18,17 @@ export default defineNuxtConfig({
     head: {
       title: 'Jeff Lester — Full Stack Developer',
       htmlAttrs: { lang: 'en' },
-      meta: [{ name: 'description', content: 'Developer resume and portfolio' }],
+      meta: [
+        { name: 'description', content: 'Full stack developer specializing in TypeScript, React, Vue, and Cloudflare Workers. View my interactive resume and portfolio.' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://jefflesterdev-nuxt.jeffery-a-lester.workers.dev' },
+        { property: 'og:site_name', content: 'Jeff Lester' },
+        { property: 'og:title', content: 'Jeff Lester — Full Stack Developer' },
+        { property: 'og:description', content: 'Full stack developer specializing in TypeScript, React, Vue, and Cloudflare Workers. View my interactive resume and portfolio.' },
+        { name: 'twitter:card', content: 'summary' },
+        { name: 'twitter:title', content: 'Jeff Lester — Full Stack Developer' },
+        { name: 'twitter:description', content: 'Full stack developer specializing in TypeScript, React, Vue, and Cloudflare Workers. View my interactive resume and portfolio.' },
+      ],
       link: [
         { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

@@ -14,9 +14,24 @@ const jetbrains = JetBrains_Mono({
   display: 'swap',
 })
 
+const description = 'Full stack developer specializing in TypeScript, React, Vue, and Cloudflare Workers. View my interactive resume and portfolio.'
+const url = 'https://jefflesterdev-next.jeffery-a-lester.workers.dev'
+
 export const metadata: Metadata = {
   title: 'Jeff Lester — Full Stack Developer',
-  description: 'Developer resume and portfolio',
+  description,
+  openGraph: {
+    type: 'website',
+    url,
+    siteName: 'Jeff Lester',
+    title: 'Jeff Lester — Full Stack Developer',
+    description,
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Jeff Lester — Full Stack Developer',
+    description,
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
