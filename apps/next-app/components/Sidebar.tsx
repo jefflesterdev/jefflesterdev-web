@@ -26,7 +26,7 @@ export default function Sidebar({ profile, locale, onLocaleChange }: Props) {
   return (
     <aside
       aria-label="Profile and navigation"
-      className="animate-sidebar dot-grid flex flex-col gap-8 p-6 sm:p-8 border-b lg:border-b-0 lg:border-r lg:h-screen lg:sticky lg:top-0 lg:overflow-y-auto"
+      className="animate-sidebar dot-grid flex flex-col gap-4 p-6 sm:p-8 border-b lg:border-b-0 lg:border-r lg:h-screen lg:sticky lg:top-0 lg:overflow-y-auto"
       style={{ background: 'var(--color-surface)', borderColor: 'var(--color-border)' }}
     >
       {/* Avatar + identity */}

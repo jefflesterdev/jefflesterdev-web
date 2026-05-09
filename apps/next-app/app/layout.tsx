@@ -18,18 +18,18 @@ const description = 'Senior full stack developer with 20+ years of production ex
 const url = 'https://jefflesterdev-next.jeffery-a-lester.workers.dev'
 
 export const metadata: Metadata = {
-  title: 'Jeff Lester — Full Stack Developer',
+  title: 'Jeff Lester - Senior-level Full Stack Developer',
   description,
   openGraph: {
     type: 'website',
     url,
     siteName: 'Jeff Lester',
-    title: 'Jeff Lester — Full Stack Developer',
+    title: 'Jeff Lester - Senior-level Full Stack Developer',
     description,
   },
   twitter: {
     card: 'summary',
-    title: 'Jeff Lester — Full Stack Developer',
+    title: 'Jeff Lester - Senior-level Full Stack Developer',
     description,
   },
 }

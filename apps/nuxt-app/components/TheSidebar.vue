@@ -27,7 +27,7 @@ const NAV = [
 <template>
   <aside
     aria-label="Profile and navigation"
-    class="animate-sidebar dot-grid flex flex-col gap-8 p-6 sm:p-8 border-b lg:border-b-0 lg:border-r lg:h-screen lg:sticky lg:top-0 lg:overflow-y-auto"
+    class="animate-sidebar dot-grid flex flex-col gap-4 p-6 sm:p-8 border-b lg:border-b-0 lg:border-r lg:h-screen lg:sticky lg:top-0 lg:overflow-y-auto"
     style="background: var(--color-surface); border-color: var(--color-border)"
   >
     <!-- Avatar + identity -->
