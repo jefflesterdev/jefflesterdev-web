@@ -28,7 +28,7 @@ export default function Home() {
         Skip to main content
       </a>
 
-      <div className="lg:grid lg:grid-cols-[20rem_1fr] min-h-screen overflow-x-hidden">
+      <div className="lg:grid lg:grid-cols-[20rem_1fr] min-h-screen">
         <Sidebar profile={profile} locale={locale} onLocaleChange={setLocale} />
 
         <main id="main-content" className="animate-main p-6 sm:p-8 lg:p-12 max-w-3xl" tabIndex={-1}>
