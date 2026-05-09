@@ -7,7 +7,8 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
   vite: {
-    plugins: [tailwindcss()],
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    plugins: [tailwindcss() as any],
     server: {
       hmr: { port: 24678 },
     },
